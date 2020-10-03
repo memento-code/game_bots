@@ -72,7 +72,7 @@ class BotRunner:
     def set_foreground(self, game_window_name):
         """
         Выведение игры на главный план по части её названия (например, FallGuys найдёт окно FallGuys_client)
-        :param game_window_name: - название игры, которая выведется на главный план
+        :param game_window_name: - полное или частичное название окна с игрой
         """
         if game_window_name is not None:
             win32gui.EnumWindows(self._window_enum_callback, game_window_name)
